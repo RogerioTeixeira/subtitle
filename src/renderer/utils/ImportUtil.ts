@@ -22,7 +22,6 @@ async function readExcelAndBuildJson(buffer) {
 
   const subtitles = [];
   workbook.eachSheet((sheet, id) => {
-    console.log('Sheet name:', sheet.name);
     const columns = {};
     const headerRow = sheet.getRow(1);
     headerRow.eachCell({ includeEmpty: true }, (cell, colNumber) => {

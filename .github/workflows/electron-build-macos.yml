@@ -3,10 +3,10 @@ name: Build Electron App for macOS
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
   workflow_dispatch: # Aggiunge il pulsante per avviare manualmente il workflow
 
 jobs:
