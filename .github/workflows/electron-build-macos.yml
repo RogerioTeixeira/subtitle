@@ -8,6 +8,8 @@ on:
     branches:
       - master
   workflow_dispatch: # Aggiunge il pulsante per avviare manualmente il workflow
+  permissions:
+     contents: write
 
 jobs:
   build-macos:
