@@ -42,10 +42,12 @@ jobs:
           TAG_NAME=v1.0.$(date +'%Y%m%d%H%M%S')
           git tag $TAG_NAME
           git push origin $TAG_NAME
+          echo "::set-output name=TAG_NAME::$TAG_NAME"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: ${{ steps.tag_step.outputs.TAG_NAME }}
           files: release/build/*.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
