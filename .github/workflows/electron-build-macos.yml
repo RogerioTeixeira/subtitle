@@ -32,6 +32,13 @@ jobs:
       - name: Build Electron app
         run: npm run package
 
+      - name: Create tag
+        id: tag_step
+        run: |
+          TAG_NAME=v1.0.$(date +'%Y%m%d%H%M%S')
+          git tag $TAG_NAME
+          git push origin $TAG_NAME
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:

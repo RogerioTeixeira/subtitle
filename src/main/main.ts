@@ -183,6 +183,7 @@ const createWindow = async () => {
     width: 1024,
     height: 728,
     icon: getAssetPath('icon.png'),
+    fullscreen: false,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -193,6 +194,7 @@ const createWindow = async () => {
     },
   });
 
+  mainWindow.maximize();
   mainWindow.loadURL(resolveHtmlPath('index.html'));
 
   mainWindow.on('ready-to-show', () => {

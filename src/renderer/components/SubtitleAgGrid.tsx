@@ -328,17 +328,17 @@ const SubtitleAgGrid = forwardRef(
             <Button
               variant="outlined"
               onClick={buttonLabel === 'Show' ? handleShow : handleShowNext}
-              sx={{ width: 140 }}
+              sx={{ width: 120 }}
             >
               {buttonLabel}
             </Button>
-            <Button variant="outlined" onClick={handleHide} sx={{ width: 140 }}>
+            <Button variant="outlined" onClick={handleHide} sx={{ width: 120 }}>
               Hide
             </Button>
             <Button
               variant="outlined"
               onClick={handleReset}
-              sx={{ width: 140 }}
+              sx={{ width: 120 }}
             >
               Reset
             </Button>
@@ -346,14 +346,14 @@ const SubtitleAgGrid = forwardRef(
               variant="outlined"
               onClick={handleJumpToStart}
               disabled={!getSelectedRowNode()?.data?.start} // Disabilita il pulsante se non c'è uno start time
-              sx={{ width: 140 }}
+              sx={{ width: 120 }}
             >
               Go to
             </Button>
             <Button
               variant="outlined"
               onClick={() => console.log('Edit button clicked')}
-              sx={{ width: 140 }}
+              sx={{ width: 120 }}
             >
               Edit
             </Button>

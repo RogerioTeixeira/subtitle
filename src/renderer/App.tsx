@@ -21,7 +21,7 @@ function App() {
   return (
     <GlobalProvider>
       <AppProvider navigation={NAVIGATION} branding={{ title: 'Subtitle' }}>
-        <DashboardLayout>
+        <DashboardLayout defaultSidebarCollapsed>
           <SubtitleBuilder />
         </DashboardLayout>
       </AppProvider>
