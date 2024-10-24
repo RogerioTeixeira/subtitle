@@ -8,12 +8,14 @@ on:
     branches:
       - master
   workflow_dispatch: # Aggiunge il pulsante per avviare manualmente il workflow
-  permissions:
-     contents: write
+
 
 jobs:
   build-macos:
     runs-on: macos-latest
+
+    permissions:
+     contents: write
 
     steps:
       # Checkout the repository
